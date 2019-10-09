@@ -7,8 +7,10 @@
 var globalVariable;
 
 // Declare two variables which will be same-names but contain different values.
-var sameName = 5;
-var sameName = 10;
+let sameName = 10;
+{
+    let sameName = 25;
+}
 
 // Declare a variable with hosting.
 hoistedVariable = 'Hi';
