@@ -1,3 +1,3 @@
-function extractNumbers (text) {
+function extractNumbers(text) {
   return null;
 }
