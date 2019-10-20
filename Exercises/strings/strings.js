@@ -13,6 +13,8 @@ let favoriteCat = 'Murchyk';
 console.log(`My favourite animal is cat ${favoriteCat}`);
 
 // 5. Declare a variable which contain name and surname of your favourite writer in lowercase. Log his/her name with capitals first letters.
-let favoriteWriter = 'isaak asimov';
-let properFavoriteWriter = favoriteWriter[0].toUpperCase() + 'saak ' + favoriteWriter[6].toUpperCase() + 'simov';
+let favoriteWriter = 'herbert wells';
+const wordsDivisorIndex = favoriteWriter.indexOf(' ');
+const properFavoriteWriter = favoriteWriter[0].toUpperCase() + favoriteWriter.slice(1, favoriteWriter.indexOf(' ')) + ' '
++ favoriteWriter[wordsDivisorIndex + 1].toUpperCase() + favoriteWriter.substring((wordsDivisorIndex + 2), favoriteWriter.length);
 console.log(properFavoriteWriter);
