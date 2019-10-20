@@ -63,9 +63,26 @@ console.log(action);
 let diffTypes = [false, 1, 2, 'three', 'four', 5, {six: 6}];
 
 // 2. Iterate through it and collect amount of each data type to object.
-let collectedTypes = {};
-for (let i = 0; i < diffTypes.length; i++){
-    let type = typeof diffTypes[i];
-    collectedTypes[i] = type;
+const collectedTypes = {
+  string: 0,
+  number: 0,
+  boolean: 0,
+  undefined: 0,
+  object: 0,
 };
+for (let i = 0; i < differentTypes.length; i++) {
+  if (typeof differentTypes[i] === 'string') {
+    collectedTypes.string++;
+  } else if (typeof differentTypes[i] === 'number') {
+    collectedTypes.number++;
+  } else if (typeof differentTypes[i] === 'boolean') {
+    collectedTypes.boolean++;
+  } else if (typeof differentTypes[i] === 'undefined') {
+    collectedTypes.undefined++;
+  } else if (typeof differentTypes[i] === 'object') {
+    collectedTypes.object++;
+  } else {
+    console.log('Unknown type');
+  }
+}
 console.log(collectedTypes);
