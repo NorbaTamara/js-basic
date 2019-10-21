@@ -2,37 +2,37 @@
 // 1. Declare a variable on each type using two options: plain creation, creation with constructor.
 // 2. Use operator typeof on each of them.
 //number
-let plainNumber = 10;
+const plainNumber = 10;
 typeof plainNumber;
-let constructorNumber = new Number(100);
+const constructorNumber = new Number(100);
 typeof constructorNumber;
 //string
-let plainString = 'hi';
+const plainString = 'hi';
 typeof plainString;
-let constructorString = new String('hello');
+const constructorString = new String('hello');
 typeof constructorString;
 //boolean
-let plainBoolean = true;
+const plainBoolean = true;
 typeof plainBoolean;
-let constructorBoolean = new Boolean(false);
+const constructorBoolean = new Boolean(false);
 typeof constructorBoolean;
 
 //null
-let variableNull = null;
+const variableNull = null;
 typeof variableNull;
 //undefined
-let variableUndefined = undefined;
+const variableUndefined = undefined;
 typeof variableUndefined;
 
 //array
-let plainArray = [1, 2, 3];
+const plainArray = [1, 2, 3];
 typeof plainArray;
-let constructorArray = new Array('a', 'b', 'c');
+const constructorArray = new Array('a', 'b', 'c');
 typeof constructorArray;
 //object
-let plainObject = {a: 1, b: 2, c: 3};
+const plainObject = {a: 1, b: 2, c: 3};
 typeof plainObject;
-let constructorObj = new Object({a: 'a', b: 'b', c: 'c'});
+const constructorObj = new Object({a: 'a', b: 'b', c: 'c'});
 typeof constructorObject;
 
 // 3. Demonstrate object's references.
