@@ -53,8 +53,8 @@ console.log(originObject);
 console.log(properlyCopiedObject); // properlyCopiedObject can be changed independently from origin
 
 // 4. Demonstrate string's backticks features.
-let title = 'Students';
-let action = `${title} learn js `;
+const title = 'Students';
+const action = `${title} learn js `;
 console.log(action);
 
 
@@ -63,26 +63,13 @@ console.log(action);
 let diffTypes = [false, 1, 2, 'three', 'four', 5, {six: 6}];
 
 // 2. Iterate through it and collect amount of each data type to object.
-const collectedTypes = {
-  string: 0,
-  number: 0,
-  boolean: 0,
-  undefined: 0,
-  object: 0,
+const typesAmount = {};
+for (let element of differentTypes){
+    let type = typeof element;
+    if (typesAmount[type] === undefined){
+       typesAmount[type] = 1;
+    } else {
+        typesAmount[type]++;
+    }
 };
-for (let i = 0; i < differentTypes.length; i++) {
-  if (typeof differentTypes[i] === 'string') {
-    collectedTypes.string++;
-  } else if (typeof differentTypes[i] === 'number') {
-    collectedTypes.number++;
-  } else if (typeof differentTypes[i] === 'boolean') {
-    collectedTypes.boolean++;
-  } else if (typeof differentTypes[i] === 'undefined') {
-    collectedTypes.undefined++;
-  } else if (typeof differentTypes[i] === 'object') {
-    collectedTypes.object++;
-  } else {
-    console.log('Unknown type');
-  }
-}
-console.log(collectedTypes);
+console.log(typesAmount);
