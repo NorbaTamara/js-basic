@@ -4,8 +4,8 @@ const unicodeString = 'Example of unicode symbol is \u00B9';
 console.log(unicodeString);
 
 // 2. Declare a variable with string with escaped symbols.
-const escapeSymbols = 'Hello,\n this is text on new line\t and this is text with tabulation';
-console.log(escapeSymbol);
+const escapeSymbols = 'Hello,\nthis is text on new line\t and this is text with tabulation';
+console.log(escapeSymbols);
 
 // 3. Declare a variable which will contain name of your favourite animal.
 // 4. Log a message My favourite animal is with dynamic variable from previous task.
