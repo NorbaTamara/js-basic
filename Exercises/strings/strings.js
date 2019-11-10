@@ -27,31 +27,30 @@ console.log(properFavoriteWriter);
 //   - should contain at leas one special character.
 
 function validatePassword(password) {
-    if (password.length < 8){
-        return false;
-    } else if (!password.match(/[A-Z]/)) {
-        return false;
-    } else if (!password.match(/[!@#$%^&*(),.?":{}|<>]/)) {
-        return false;
-    } else {
-    return true;
-    }
+  if (password.length < 8) {
+    return false;
+  } else if (!password.match(/[A-Z]/)) {
+    return false;
+  } else if (!password.match(/[!@#$%^&*(),.?":{}|<>]/)) {
+    return false;
   }
+  return true;
+}
 
 console.log(validatePassword('gjjlhGjj&jj'));
 
 // 2. Make function which will generate password suggestion based on passed password, and required strongest.
 
-function makeStrongPass(password){
-    let strongPass = '';
-    const simpleChars = 'abcdefghijklmnopqrstuvwxyz';
-    const specialChars = '!@#$%^&*(),.?":{}|<>';
-    while (strongPass.length < (password.length + 8)) {
-      strongPass += simpleChars[Math.floor(Math.random()*simpleChars.length)];
-      strongPass += simpleChars[Math.floor(Math.random()*simpleChars.length)].toUpperCase();
-      strongPass += specialChars[Math.floor(Math.random()*specialChars.length)];
-    }
-  return password + strongPass; 
+function makeStrongPass(password) {
+  let strongPass = '';
+  const simpleChars = 'abcdefghijklmnopqrstuvwxyz';
+  const specialChars = '!@#$%^&*(),.?":{}|<>';
+  while (strongPass.length < (password.length + 8)) {
+    strongPass += simpleChars[Math.floor(Math.random() * simpleChars.length)];
+    strongPass += simpleChars[Math.floor(Math.random() * simpleChars.length)].toUpperCase();
+    strongPass += specialChars[Math.floor(Math.random() * specialChars.length)];
   }
-  
-  console.log(makeStrongPass('bla'));
+  return password + strongPass;
+}
+
+console.log(makeStrongPass('bla'));
