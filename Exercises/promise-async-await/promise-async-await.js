@@ -46,31 +46,43 @@ parallelRequests2()
 
 // Call `fakeAjax` do 3 request in serial
 async function serialRequests() {
-  await fakeAjax().catch(error => {
-    console.log(error.message);
-  });
-  await fakeAjax().catch(error => {
-    console.log(error.message);
-  });
-  await fakeAjax().catch(error => {
-    console.log(error.message);
-  });
+  await fakeAjax()
+    .then(result => console.log(result))
+    .catch(error => {
+      console.log(error.message);
+    });
+  await fakeAjax()
+    .then(result => console.log(result))
+    .catch(error => {
+      console.log(error.message);
+    });
+  await fakeAjax()
+    .then(result => console.log(result))
+    .catch(error => {
+      console.log(error.message);
+    });
 }
 serialRequests();
 
 // Using your `delay` function from first task add delay between each serial request.
 async function delayedSerialRequests() {
-  await fakeAjax().catch(error => {
-    console.log(error.message);
-  });
   await delay(3000);
-  await fakeAjax().catch(error => {
-    console.log(error.message);
-  });
+  await fakeAjax()
+    .then(result => console.log(result))
+    .catch(error => {
+      console.log(error.message);
+    });
   await delay(3000);
-  await fakeAjax().catch(error => {
-    console.log(error.message);
-  });
+  await fakeAjax()
+    .then(result => console.log(result))
+    .catch(error => {
+      console.log(error.message);
+    });
   await delay(3000);
+  await fakeAjax()
+    .then(result => console.log(result))
+    .catch(error => {
+      console.log(error.message);
+    });
 }
 delayedSerialRequests();
